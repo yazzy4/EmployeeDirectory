@@ -36,12 +36,52 @@ import UIKit
  */
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var employees = [Employee]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Hello employee directoryy")
+        
+        let urlString = "https://s3.amazonaws.com/sq-mobile-interview/employees.json"
+        
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                parse(json: data)
+                print(data)
+            }
+        }
+        
+        tableView.dataSource = self
     }
-
-
+    
+    func parse(json: Data) {
+        let decoder = JSONDecoder()
+        
+        if let jsonEmployees = try? decoder.decode(Employees.self, from: json) {
+            employees = jsonEmployees.employees
+            tableView.reloadData()
+        }
+    }
 }
+
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return employees.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeCell", for: indexPath)
+        let employee = employees[indexPath.row]
+        cell.textLabel?.text = employee.full_name
+        cell.detailTextLabel?.text = employee.email_address
+        return cell
+    }
+    
+    
+}
+
+
 
