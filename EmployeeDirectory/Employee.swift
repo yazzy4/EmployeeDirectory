@@ -17,8 +17,8 @@ struct Employee: Codable {
     let phone_number: String
     let email_address: String
     let biography: String
-    let photo_url_small: String
-    let photo_url_large: String
+    let photo_url_small: String?
+    let photo_url_large: String?
     let team: String
     let employee_type: String
 }

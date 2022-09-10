@@ -69,6 +69,7 @@ extension EmployeeController {
         let employee = employees[indexPath.row]
         cell.nameLabel.text = employee.full_name
         cell.jobTitleLabel.text = employee.team
+        cell.populate(with: employee)
         return cell
     }
 }

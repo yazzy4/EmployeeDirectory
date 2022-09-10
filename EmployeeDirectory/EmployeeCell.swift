@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class EmployeeCell: UICollectionViewCell {
 // MARK: - Properties
@@ -70,6 +71,14 @@ class EmployeeCell: UICollectionViewCell {
         addSubview(stack)
          stack.center(inView: employeeImageView, yConstant: 100)
          
+    }
+    
+    func populate(with image: Employee) {
+        
+        if let urlToImage = image.photo_url_small {
+            let url = URL(string: urlToImage)
+            employeeImageView.kf.setImage(with: url)
+        }
     }
     
     
