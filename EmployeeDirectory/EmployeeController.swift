@@ -28,7 +28,6 @@ class EmployeeController: UICollectionViewController {
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
                 parse(json: data)
-                print(data)
             }
         }
         self.collectionView.dataSource = self
@@ -54,8 +53,9 @@ class EmployeeController: UICollectionViewController {
     }
     
     func configureCollectionView() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Staff Directory"
         collectionView.register(EmployeeCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
     }
 }
 
@@ -70,7 +70,13 @@ extension EmployeeController {
         cell.nameLabel.text = employee.full_name
         cell.jobTitleLabel.text = employee.team
         cell.populate(with: employee)
+        
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = EmployeeDetailController(employee: employees[indexPath.row])
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -88,3 +94,4 @@ extension EmployeeController: UICollectionViewDelegateFlowLayout {
     }
 
 }
+

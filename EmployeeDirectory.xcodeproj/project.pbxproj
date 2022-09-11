@@ -15,6 +15,7 @@
 		912B343E28C90ACB00E132DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912B343C28C90ACB00E132DF /* LaunchScreen.storyboard */; };
 		912B344628C9105900E132DF /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912B344528C9105900E132DF /* Employee.swift */; };
 		91B12C3D28CD065F00975B84 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 91B12C3C28CD065F00975B84 /* Kingfisher */; };
+		91B12C3F28CE4E7D00975B84 /* EmployeeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B12C3E28CE4E7D00975B84 /* EmployeeDetailController.swift */; };
 		91BC2D1428CBD1390008BB37 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BC2D1328CBD1390008BB37 /* NetworkService.swift */; };
 		91BC2D1628CBD5A60008BB37 /* EmployeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BC2D1528CBD5A60008BB37 /* EmployeeController.swift */; };
 		91BC2D1828CBD6E80008BB37 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BC2D1728CBD6E80008BB37 /* Helpers.swift */; };
@@ -31,6 +32,7 @@
 		912B343D28C90ACB00E132DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		912B343F28C90ACB00E132DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		912B344528C9105900E132DF /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		91B12C3E28CE4E7D00975B84 /* EmployeeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailController.swift; sourceTree = "<group>"; };
 		91BC2D1328CBD1390008BB37 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		91BC2D1528CBD5A60008BB37 /* EmployeeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeController.swift; sourceTree = "<group>"; };
 		91BC2D1728CBD6E80008BB37 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				912B343328C90AC800E132DF /* SceneDelegate.swift */,
 				912B343528C90AC800E132DF /* ViewController.swift */,
 				91BC2D1528CBD5A60008BB37 /* EmployeeController.swift */,
+				91B12C3E28CE4E7D00975B84 /* EmployeeDetailController.swift */,
 				91D9941628CBC2B100CF6469 /* EmployeeCell.swift */,
 				912B344528C9105900E132DF /* Employee.swift */,
 				91BC2D1328CBD1390008BB37 /* NetworkService.swift */,
@@ -169,6 +172,7 @@
 				912B343428C90AC800E132DF /* SceneDelegate.swift in Sources */,
 				91BC2D1428CBD1390008BB37 /* NetworkService.swift in Sources */,
 				91BC2D1628CBD5A60008BB37 /* EmployeeController.swift in Sources */,
+				91B12C3F28CE4E7D00975B84 /* EmployeeDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
